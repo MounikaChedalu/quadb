@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Polindrome</h1>
+    <script>
+        let str="madam";
+function polindrom(str){
+    for(i=0;i<str.length/2;i++){
+        if(str[i] !== str[str.length-1-i]){
+            return 'it is not polindrom';
+        }
+    }
+    return 'it is polindrom';
+}
+console.log(polindrom(str));
+    </script>
+
+    
+</body>
+</html>

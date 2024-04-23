@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Median</h1>
+    <script>
+        function findMedian(arr) {
+    const length = arr.length;
+    const mid = Math.floor(length / 2);
+
+    if (length % 2 === 0) {
+        return (arr[mid - 1] + arr[mid]) / 2;
+    } else {
+        return arr[mid];
+    }
+}
+
+const sortedArray = [1, 2, 3, 4, 5];
+const median = findMedian(sortedArray);
+console.log("Median:", median);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Common prefix</h1>
+    <script>
+        function longestCommonPrefix(strs) {
+    if (strs.length === 0) return "";
+    strs.sort((a, b) => a.length - b.length);
+
+    const shortest = strs[0];
+    let prefix = "";
+
+    for (let i = 0; i < shortest.length; i++) {
+        const char = shortest[i];
+        for (let j = 1; j < strs.length; j++) {
+            if (strs[j][i] !== char) {
+                return prefix;
+            }
+        }
+        prefix += char;
+    }
+
+    return prefix;
+}
+const strings = ["flower", "flow", "flight"];
+const commonPrefix = longestCommonPrefix(strings);
+console.log("Longest common prefix:", commonPrefix); 
+
+    </script>
+    
+</body>
+</html>
